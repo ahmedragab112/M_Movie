@@ -1,12 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie/Core/extentions/extentions.dart';
 import 'package:movie/Data/data_source/movie%20details/movie_details_datasource.dart';
-import 'package:movie/Domain/entity/home/get_movie_entity.dart';
-import 'package:movie/Features/Home/manager/cubit.dart';
 import 'package:movie/Features/Movie%20Details/manager/cubit.dart';
 import 'package:movie/Features/Movie%20Details/manager/states.dart';
 
@@ -14,9 +11,9 @@ import '../../../Core/constants/costants.dart';
 import '../../../Core/services/utils.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
-  int movieId;
+  final int movieId;
 
-  MovieDetailsScreen(this.movieId, {super.key});
+  const MovieDetailsScreen(this.movieId, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,8 +80,8 @@ class MovieDetailsScreen extends StatelessWidget {
                               const EdgeInsets.symmetric(horizontal: 10),
                           height: 205.h,
                           width: 135.w,
-                          decoration: BoxDecoration(
-                            color: const Color(0XFF282A28),
+                          decoration: const BoxDecoration(
+                            color: Color(0XFF282A28),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
@@ -181,8 +178,8 @@ class MovieDetailsScreen extends StatelessWidget {
                                                 horizontal: 14),
                                             height: 140.h,
                                             width: 110.w,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0XFF282A28),
+                                            decoration: const BoxDecoration(
+                                              color: Color(0XFF282A28),
                                             ),
                                             child: CachedNetworkImage(
                                               imageUrl:

@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -15,7 +14,7 @@ import '../../../main.dart';
 class LogInView extends StatelessWidget {
   LogInView({super.key});
 
-  var formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +43,6 @@ class LogInView extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            var mediaQuery = MediaQuery
-                .of(context)
-                .size;
             var theme = Theme.of(context);
             var cubit = LogInCubit.get(context);
             return Form(

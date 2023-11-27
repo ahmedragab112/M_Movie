@@ -14,6 +14,7 @@ class LogInCubit extends Cubit<LogInStates>{
   logIn()async{
     try {
       emit(LogInLoadingState());
+      // ignore: unused_local_variable
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: email.text,
           password: password.text

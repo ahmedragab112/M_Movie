@@ -1,10 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie/Core/extentions/extentions.dart';
-import 'package:movie/Domain/entity/home/get_movie_entity.dart';
 import 'package:movie/Features/Home/manager/cubit.dart';
 import 'package:movie/Features/Home/manager/states.dart';
 
@@ -45,7 +43,7 @@ class _WatchListViewState extends State<WatchListView> {
                   ),
                   IconButton(onPressed: () {
                     cubit.logout();
-                  }, icon: Icon(Icons.logout),color: Colors.white,)
+                  }, icon:const Icon(Icons.logout),color: Colors.white,)
                 ],
               ).setOnlyPadding(context, top: 0.02),
               cubit.moviesWatchList.isNotEmpty
@@ -54,7 +52,7 @@ class _WatchListViewState extends State<WatchListView> {
                   itemBuilder: (context, index) {
                     return Stack(
                       children: [
-                        Container(
+                        SizedBox(
                           width: mediaQuery.width,
                           height: 110.h,
                           child: Row(

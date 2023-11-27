@@ -15,7 +15,6 @@ class BrowseView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-    var mediaQuery = MediaQuery.of(context).size;
     var cubit = HomeCubit.get(context);
     return BlocConsumer<HomeCubit, HomeStates>(
         listener: (context, state) {},

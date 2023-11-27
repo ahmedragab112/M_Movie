@@ -5,7 +5,6 @@ import 'package:movie/Data/model/home/get_movie_model.dart';
 import 'package:movie/Data/model/home/movie_category_model.dart';
 
 import '../../../Core/constants/costants.dart';
-import '../../model/home/get_new_release_model.dart';
 
 abstract class HomeDataSource {
   Future<Either<Failure, GetMovieModel>> getPopular();

@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,9 +12,9 @@ import '../../../Core/constants/costants.dart';
 import '../../../Core/services/utils.dart';
 
 class MoviesListView extends StatelessWidget {
-  int categoryId;
+ final int categoryId;
 
-  MoviesListView(this.categoryId, {super.key});
+const  MoviesListView(this.categoryId, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,7 @@ class MoviesListView extends StatelessWidget {
                           context, PageRouteName.movieDetails,
                           arguments: cubit.movies[index].id);
                     },
-                    child: Container(
+                    child: SizedBox(
                       width: mediaQuery.width,
                       height: 110.h,
                       child: Row(
@@ -53,7 +52,7 @@ class MoviesListView extends StatelessWidget {
                           Stack(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(5),
+                                padding:const EdgeInsets.all(5),
                                 height: 100.h,
                                 width: 140.w,
                                 decoration: const BoxDecoration(

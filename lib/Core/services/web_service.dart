@@ -14,12 +14,10 @@ class WebService {
 
   WebService._({required String baseUrl}) {
     publicDio.options.baseUrl = baseUrl;
-    //publicDio.options.baseUrl = Constants.baseUrl ;
     publicDio.options.connectTimeout = const Duration(milliseconds: 30000);
     publicDio.options.sendTimeout = const Duration(milliseconds: 30000);
     publicDio.options.receiveTimeout = const Duration(milliseconds: 30000);
     publicDio.options.connectTimeout = const Duration(milliseconds: 30000);
-
     interceptors();
   }
 

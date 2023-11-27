@@ -114,7 +114,7 @@ class HomeView extends StatelessWidget {
                                       ),
                                       Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           SizedBox(
                                             width: 80.w,
@@ -128,10 +128,17 @@ class HomeView extends StatelessWidget {
                                               child: Container(
                                                 decoration: BoxDecoration(
                                                     borderRadius:
-                                                    BorderRadius.circular(8),
+                                                        BorderRadius.circular(
+                                                            8),
                                                     color: Colors.grey),
-                                                padding: EdgeInsets.all(5),
-                                                child: Text("Add to WatchList",style: theme.textTheme.bodySmall?.copyWith(color: Colors.black)),
+                                                padding:
+                                                    const EdgeInsets.all(4),
+                                                child: Text("Add to WatchList",
+                                                    style: theme
+                                                        .textTheme.bodySmall
+                                                        ?.copyWith(
+                                                            color:
+                                                                Colors.black)),
                                               ),
                                             ),
                                           ),
@@ -139,29 +146,31 @@ class HomeView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-
-                                  Align(
-                                    alignment: Alignment.bottomLeft,
-                                    child: Container(
-                                      height: 199.h,
-                                      width: 129.w,
-                                      child: InkWell(
-                                        onTap: () {
-                                          Navigator.pushNamed(
-                                              context, PageRouteName.movieDetails,
-                                              arguments: movie.id);
-                                        },
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          child: Image.network(
-                                            "${Constants.imagePath}${movie.posterPath}",
-                                            fit: BoxFit.cover,
+                                  Positioned(
+                                    bottom: 10,
+                                    child: Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: SizedBox(
+                                        height: 198.h,
+                                        width: 129.w,
+                                        child: InkWell(
+                                          onTap: () {
+                                            Navigator.pushNamed(context,
+                                                PageRouteName.movieDetails,
+                                                arguments: movie.id);
+                                          },
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            child: Image.network(
+                                              "${Constants.imagePath}${movie.posterPath}",
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ).setPadding(context, horizontal: 0.05),
+                                    ).setPadding(context, horizontal: 0.05),
+                                  ),
                                 ],
                               );
                             },
@@ -173,7 +182,7 @@ class HomeView extends StatelessWidget {
                   height: 30.h,
                 ),
                 Container(
-                    color:  const Color(0XFF282A28), 
+                    color: const Color(0XFF282A28),
                     height: 222.h,
                     width: MediaQuery.of(context).size.width,
                     child: Column(
@@ -200,8 +209,8 @@ class HomeView extends StatelessWidget {
                                           horizontal: 10),
                                       height: 150.h,
                                       width: 110.w,
-                                      decoration: BoxDecoration(
-                                        color: const Color(0XFF282A28),
+                                      decoration: const BoxDecoration(
+                                        color: Color(0XFF282A28),
                                       ),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(5),
@@ -251,7 +260,7 @@ class HomeView extends StatelessWidget {
                   height: 30.h,
                 ),
                 Container(
-                    color:const Color(0XFF282A28),
+                    color: const Color(0XFF282A28),
                     height: 260.h,
                     width: MediaQuery.of(context).size.width,
                     child: Column(
@@ -282,8 +291,8 @@ class HomeView extends StatelessWidget {
                                               horizontal: 14),
                                           height: 140.h,
                                           width: 110.w,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0XFF282A28),
+                                          decoration: const BoxDecoration(
+                                            color: Color(0XFF282A28),
                                           ),
                                           child: CachedNetworkImage(
                                             imageUrl:

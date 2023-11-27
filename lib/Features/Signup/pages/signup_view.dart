@@ -13,7 +13,7 @@ import '../../../main.dart';
 class SignUpView extends StatelessWidget {
   SignUpView({super.key});
 
-  var formKey = GlobalKey<FormState>();
+ final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,6 @@ class SignUpView extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            var mediaQuery = MediaQuery.of(context).size;
             var theme = Theme.of(context);
             var cubit = SignUpCubit.get(context);
             return Form(

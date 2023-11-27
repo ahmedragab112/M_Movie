@@ -17,11 +17,12 @@ class HomeLayout extends StatelessWidget {
         ..getNewRelease()
         ..getTopRated()
         ..getMovieCategory()
-      ..getWatchList(),
+        ..getWatchList(),
       child: BlocConsumer<HomeCubit, HomeStates>(
         listener: (context, state) {
-          if(state is LogOutSuccessState){
-            Navigator.pushNamedAndRemoveUntil(context, PageRouteName.login, (route) => false);
+          if (state is LogOutSuccessState) {
+            Navigator.pushNamedAndRemoveUntil(
+                context, PageRouteName.login, (route) => false);
           }
         },
         builder: (context, state) {
@@ -29,14 +30,20 @@ class HomeLayout extends StatelessWidget {
           return Scaffold(
             body: cubit.pages[cubit.currentIndex],
             bottomNavigationBar: BottomNavigationBar(
-              items:  [
-                BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/icons/home.png")), label: "Home"),
+              items: const [
+                BottomNavigationBarItem(
+                    icon: ImageIcon(AssetImage("assets/images/icons/home.png")),
+                    label: "Home"),
                 BottomNavigationBarItem(
                     icon: Icon(CupertinoIcons.search), label: "Search"),
                 BottomNavigationBarItem(
-                    icon: ImageIcon(AssetImage("assets/images/icons/browse.png")), label: "Browse"),
+                    icon:
+                        ImageIcon(AssetImage("assets/images/icons/browse.png")),
+                    label: "Browse"),
                 BottomNavigationBarItem(
-                    icon: ImageIcon(AssetImage("assets/images/icons/watchlist.png")), label: "WatchList"),
+                    icon: ImageIcon(
+                        AssetImage("assets/images/icons/watchlist.png")),
+                    label: "WatchList"),
               ],
               currentIndex: cubit.currentIndex,
               onTap: (value) {
