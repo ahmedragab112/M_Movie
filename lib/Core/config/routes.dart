@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie/Core/config/page_route_name.dart';
 import 'package:movie/Features/Forgot%20Password/pages/forgot_password_view.dart';
@@ -20,10 +19,11 @@ class Routes {
             builder: (context) => LogInView(), settings: routeSettings);
       case PageRouteName.signUp:
         return MaterialPageRoute<dynamic>(
-            builder: (context) =>  SignUpView(), settings: routeSettings);
+            builder: (context) => SignUpView(), settings: routeSettings);
       case PageRouteName.forgot:
         return MaterialPageRoute<dynamic>(
-            builder: (context) =>  const ForgotPasswordView(), settings: routeSettings);
+            builder: (context) => const ForgotPasswordView(),
+            settings: routeSettings);
       case PageRouteName.home:
         return MaterialPageRoute<dynamic>(
             builder: (context) => const HomeLayout(), settings: routeSettings);
