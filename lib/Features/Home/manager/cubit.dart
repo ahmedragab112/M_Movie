@@ -16,7 +16,6 @@ import 'package:movie/Features/Home/pages/search_view.dart';
 import 'package:movie/Features/Home/pages/watchlist_view.dart';
 
 import '../../../Data/data_source/home/home_datasource.dart';
-import '../../../Data/model/home/get_movie_model.dart';
 import '../../../Data/repository_imp/home/home_repositoy_imp.dart';
 import '../../../Domain/entity/home/get_new_release_entity.dart';
 import '../../../Domain/repository/home/home_repository.dart';

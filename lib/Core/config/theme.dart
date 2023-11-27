@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 final appTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0XFF121312),
-    primaryColor: const Color(0XFFFFBB3B), // yellow
+    primaryColor: const Color(0XFFFFBB3B), 
    
     backgroundColor: const Color(0XFF121312),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
